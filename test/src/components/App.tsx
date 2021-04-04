@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import ArticleCard from './ArticleCard';
-import { Route } from 'react-router-dom';
+import Article from '../containers/Article';
+import { Route, useParams  } from 'react-router-dom';
 
 interface IArticle {
   userId: number,
@@ -23,19 +24,25 @@ const App:React.FC<AppProps> = ({ fetchArticles, articles }) =>  {
     fetchArticles();
   }, []);
 
+
   return (
     <Container>
-      <header className="text-center m-3">
-        <h1> My blog </h1>
-      </header>
-      <div className="articles">
-        <h2> My articles </h2>
-        <div className="d-flex flex-wrap">
-          { articles.map((article) => (
-            <ArticleCard key={ article.id } {...article}/>
-          )) }
+      <Route exact path="/">
+        <header className="text-center m-3">
+          <h1> My blog </h1>
+        </header>
+        <div className="articles">
+          <h2> My articles </h2>
+          <div className="d-flex flex-wrap">
+            { articles.map((article) => (
+              <ArticleCard key={ article.id } {...article}/>
+            )) }
+          </div>
         </div>
-      </div>
+      </Route>
+      <Route exact path="/article/:id">
+        <Article />
+      </Route>
     </Container>
   );
 }
