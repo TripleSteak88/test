@@ -11,20 +11,15 @@ interface IArticle {
 
 type ArticlesAction = {
     type: string,
-    articlesList?: IArticle[],
+    articlesList: IArticle[],
 }
-
-// type singleArticleAction = {
-//     type: string,
-//     // singleArticle?: IArticle,
-// }
 
 export const fetchArticles = (): { type: string } => ({
     type: FETCH_ARTICLES,
 });
   
 export const saveArticles = (articlesList: IArticle[]): ArticlesAction => ({
-  type: SAVE_ARTICLES,
-  articlesList,
+    type: SAVE_ARTICLES,
+    articlesList,
 });
   

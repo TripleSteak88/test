@@ -7,7 +7,7 @@ interface IArticle {
   body: string,
 }
 
-type ArticleStateI = {
+type ArticleStateType = {
   articles: IArticle[],
 }
 
@@ -16,13 +16,13 @@ type ArticlesAction = {
   articlesList: IArticle[],
 }
 
-const initialState: ArticleStateI = {
+const initialState: ArticleStateType = {
     articles: [],
 };
   
 const articlesReducer = (
-  state: ArticleStateI = initialState, action: ArticlesAction 
-  ): ArticleStateI => {
+  state: ArticleStateType = initialState, action: ArticlesAction 
+  ): ArticleStateType => {
   switch (action.type) {
     case SAVE_ARTICLES:
       return {
