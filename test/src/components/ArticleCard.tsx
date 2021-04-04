@@ -18,7 +18,7 @@ const ArticleCard:React.FC<ArticleProps> = ({ id, title, body }) =>  {
         <Card.Body>
         <Card.Title>{ title }</Card.Title>
         <Card.Text>{ body }</Card.Text>
-        <Card.Link href={`http://localhost:3000/${id}`}>Read the article</Card.Link>
+        <Card.Link href={`http://localhost:3000/article/${id}`}>Read the article</Card.Link>
         </Card.Body>
     </Card>
   )

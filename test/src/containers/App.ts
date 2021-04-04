@@ -20,7 +20,6 @@ const mapStateToProps = (state : ArticleState) => ({
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   fetchArticles: () => {
-    console.log('fetchArticle se lance');
     dispatch(fetchArticles());
   },
  

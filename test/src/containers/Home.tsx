@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch} from 'redux';
-// import { fetchArticles } from '../actions/articles';
-import App from '../components/App';
-import ArticleCard from '../components/ArticleCard';
+import Home from '../components/Home';
 
 interface IArticle {
     userId: number
@@ -20,11 +18,6 @@ const mapStateToProps = (state : ArticleState): {articles : IArticle[]} => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-//   fetchArticles: () => {
-//     console.log('fetchArticle se lance');
-//     dispatch(fetchArticles());
-//   },
- 
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ArticleCard);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
