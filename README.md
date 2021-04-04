@@ -1,7 +1,7 @@
 # Test Koji
 
 To be honest with you, it was my first time with TypeScript. I knew what it was made for but I never used it. <br/>
-So it took me more than an hour to build this project :sweat_smile: <br/>
+So it took me more than an hour to build this project :grimacing: <br/>
 Especially to read docs, and figure out how it works. <br/>
 With plain JavaScript I would have been way more efficient, but that's how you grow up ! :muscle: <br/>
 I've decided to do this exercise with Redux, for a better architecture, and a more efficient props and state management, <br/>
