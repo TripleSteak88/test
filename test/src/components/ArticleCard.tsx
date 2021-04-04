@@ -13,7 +13,6 @@ interface ArticleProps {
 const ArticleCard:React.FC<ArticleProps> = ({ id, title, body }) =>  {
 
   return (
- 
     <Card className="m-3" style={{ width: '18rem' }}>
         <Card.Body>
         <Card.Title>{ title }</Card.Title>

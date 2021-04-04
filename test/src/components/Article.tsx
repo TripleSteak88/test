@@ -29,13 +29,14 @@ const Article:React.FC<ArticleProps> = ({ articles }) =>  {
         
         <>
         { myArticle !== undefined ? (
-        <div>
+        <div className="m-3">
             <header>
                 <h1> { myArticle.title} </h1>
             </header>
             <div className="article">
                 <p> { myArticle.body} </p>
             </div>
+            <a href="/">Go back</a>
         </div>
         ) : (
         <p>En chargement</p>)
